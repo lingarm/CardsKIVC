@@ -1,0 +1,10 @@
+C:\Users\Mish\documents\visual studio 2010\Projects\CardsKIVC\CardsKIVC\bin\Debug\CardsKIVC.exe.config
+C:\Users\Mish\documents\visual studio 2010\Projects\CardsKIVC\CardsKIVC\bin\Debug\CardsKIVC.exe
+C:\Users\Mish\documents\visual studio 2010\Projects\CardsKIVC\CardsKIVC\bin\Debug\CardsKIVC.pdb
+C:\Users\Mish\documents\visual studio 2010\Projects\CardsKIVC\CardsKIVC\obj\x86\Debug\CardsKIVC.CardsKIVC.resources
+C:\Users\Mish\documents\visual studio 2010\Projects\CardsKIVC\CardsKIVC\obj\x86\Debug\CardsKIVC.Properties.Resources.resources
+C:\Users\Mish\documents\visual studio 2010\Projects\CardsKIVC\CardsKIVC\obj\x86\Debug\CardsKIVC.csproj.GenerateResource.Cache
+C:\Users\Mish\documents\visual studio 2010\Projects\CardsKIVC\CardsKIVC\obj\x86\Debug\CardsKIVC.exe
+C:\Users\Mish\documents\visual studio 2010\Projects\CardsKIVC\CardsKIVC\obj\x86\Debug\CardsKIVC.pdb
+C:\Users\Mish\documents\visual studio 2010\Projects\CardsKIVC\CardsKIVC\obj\x86\Debug\CardsKIVC.OneCard.resources
+C:\Users\Mish\documents\visual studio 2010\Projects\CardsKIVC\CardsKIVC\obj\x86\Debug\CardsKIVC.csprojResolveAssemblyReference.cache
