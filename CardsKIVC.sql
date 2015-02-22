@@ -5,14 +5,24 @@ id int not null identity (1,1) primary key,
 building int,
 )
 
-CREATE TABLE RAM (
+CREATE TABLE RAM_type (
 id int not null identity (1,1) primary key,
-RAM varchar(50),
+RAM_type varchar(50),
 )
 
-CREATE TABLE HDD (
+CREATE TABLE RAM_value (
 id int not null identity (1,1) primary key,
-HDD varchar(50),
+RAM_value varchar(50),
+)
+
+CREATE TABLE HDD_interface (
+id int not null identity (1,1) primary key,
+HDD_interface varchar(50),
+)
+
+CREATE TABLE videocard_type (
+id int not null identity (1,1) primary key,
+videocard_type varchar(50),
 )
 
 CREATE TABLE CD_DVD (
@@ -44,7 +54,6 @@ CREATE TABLE ext_program (
 id int not null identity (1,1) primary key,
 ext_program varchar(50),
 )
-DROP TABLE work_place
 
 CREATE TABLE work_place (
 id int not null identity (1,1) primary key,
@@ -53,12 +62,35 @@ building int foreign key (building) references building(id) on update cascade,
 cabinet int,
 comp_inv int,
 CPU varchar(50),
-RAM int foreign key (RAM) references RAM(id) on update cascade,
-HDD int foreign key (HDD) references HDD(id) on update cascade,
-CD_DVD int foreign key (CD_DVD) references CD_DVD(id) on update cascade,
-ext_board varchar(50),
-monitor varchar(50),
-monitor_inv int,
+RAM_value1 int foreign key (RAM_value1) references RAM_value(id),
+RAM_type1 int foreign key (RAM_type1) references RAM_type(id),
+RAM_value2 int foreign key (RAM_value2) references RAM_value(id),
+RAM_type2 int foreign key (RAM_type2) references RAM_type(id),
+RAM_value3 int foreign key (RAM_value3) references RAM_value(id),
+RAM_type3 int foreign key (RAM_type3) references RAM_type(id),
+RAM_value4 int foreign key (RAM_value4) references RAM_value(id),
+RAM_type4 int foreign key (RAM_type4) references RAM_type(id),
+HDD_value1 varchar(50),
+HDD_interface1 int foreign key (HDD_interface1) references HDD_interface(id),
+HDD_value2 varchar(50),
+HDD_interface2 int foreign key (HDD_interface2) references HDD_interface(id),
+HDD_value3 varchar(50),
+HDD_interface3 int foreign key (HDD_interface3) references HDD_interface(id),
+HDD_value4 varchar(50),
+HDD_interface4 int foreign key (HDD_interface4) references HDD_interface(id),
+CD_DVD1 int foreign key (CD_DVD1) references CD_DVD(id),
+CD_DVD2 int foreign key (CD_DVD2) references CD_DVD(id),
+ext_board_video varchar(50),
+ext_board_video_type int foreign key (ext_board_video_type) references videocard_type(id) on update cascade,
+ext_board_LAN1 varchar(50),
+ext_board_LAN2 varchar(50),
+ext_board_audio varchar(50),
+ext_board_FM varchar(50),
+ext_board_TV varchar(50),
+monitor1 varchar(50),
+monitor_inv1 int,
+monitor2 varchar(50),
+monitor_inv2 int,
 printer1 int foreign key (printer1) references printer(id),
 printer1_inv int,
 printer2 int foreign key (printer2) references printer(id),
@@ -84,45 +116,3 @@ ext_program3 int foreign key (ext_program3) references ext_program(id),
 ext_program4 int foreign key (ext_program4) references ext_program(id),
 ext_info text,
 )
-
-INSERT INTO RAM (RAM) VALUES ('128 MB')
-INSERT INTO RAM (RAM) VALUES ('256 MB')
-INSERT INTO RAM (RAM) VALUES ('512 MB')
-INSERT INTO RAM (RAM) VALUES ('1 GB')
-INSERT INTO RAM (RAM) VALUES ('2 GB')
-INSERT INTO RAM (RAM) VALUES ('4 GB')
-INSERT INTO RAM (RAM) VALUES ('8 GB')
-
-DELETE FROM RAM WHERE id = 4
-
-select * FROM RAM
-
-CREATE TABLE test (
-id int not null identity (1,1) primary key,
-t1 int foreign key (t1) references RAM(id) on update cascade,
-t2 int foreign key (t2) references RAM(id) on update no action,
-)
-
-INSERT INTO test (t1, t2) VALUES (1, 2)
-INSERT INTO test (t1, t2) VALUES (3, 4)
-
-SELECT * FROM test
-
-SELECT t.id, r.ram, r.ram
-FROM RAM as r, test as t
-WHERE r.id = t.t3
-
-UPDATE test SET t3 = 1 WHERE id = 1
-
-UPDATE RAM SET RAM = 700 WHERE id = 7
-UPDATE RAM SET RAM = 111 WHERE id = 4
-UPDATE RAM SET RAM = 444 WHERE id = 5
-update RAM set RAM = 555 where id = 5
-
-ALTER TABLE test ADD t3 INT foreign key (t3) references RAM(id)
-ALTER TABLE test ADD t5 INT foreign key (t5) references RAM(id)
-
-
-UPDATE test SET t5 = 12 where id = 2
-
-DELETE FROM RAM WHERE id = 12
