@@ -23,6 +23,8 @@ namespace CardsKIVC
         public OneCard(int id)
         {
             InitializeComponent();
+
+
             cs = ConfigurationManager.ConnectionStrings["MyConnSQL"].ConnectionString;
             conn = conn2 = new SqlConnection(cs);
             string query = "SELECT * FROM work_place WHERE id = " + id;
@@ -30,7 +32,7 @@ namespace CardsKIVC
             SqlDataReader reader;
             conn.Open();
             reader = comm.ExecuteReader();
-
+            
             int sv = 100;
 
             if(reader.Read())
@@ -38,19 +40,15 @@ namespace CardsKIVC
                 this.cabinet.Text = reader["cabinet"].ToString();
                 this.username.Text = reader["username"].ToString();
                 this.comp_inv.Text = reader["comp_inv"].ToString();
-                //this.MB.Text = reader["MB"].ToString();
-                this.monitor_inv.Text = reader["monitor_inv"].ToString();
+                this.monitor_inv.Text = reader["monitor_inv1"].ToString();
                 this.UPC_inv.Text = reader["UPC_inv"].ToString();
 
                 this.ext_info.Text = reader["ext_info"].ToString();
                 
-                sv = Convert.ToInt32(reader["building"]);//*****//
+                sv = Convert.ToInt32(reader["building"]);
             }
-            /*MessageBox.Show("value = " + Convert.ToInt32(this.building.SelectedValue).ToString()
-                    + "; reader = " + Convert.ToInt32(reader["building"]).ToString()
-                    + "; int sv = " + sv.ToString());*/
-
             conn.Close();
+            
 
             query = "SELECT * FROM building";
             comm = new SqlCommand(query, conn);
@@ -63,14 +61,24 @@ namespace CardsKIVC
             this.building.DataSource = ds.Tables[0];
             this.building.DisplayMember = "building";
             this.building.ValueMember = "id";
-            this.building.SelectedValue = sv;//*****//
+            this.building.SelectedValue = sv;
 
-            MessageBox.Show(this.building.SelectedValue.ToString());
+            //MessageBox.Show(this.building.SelectedValue.ToString());
         }
 
-        private void OneCard_Load(object sender, EventArgs e)
+        private void cabinet_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            Core.int_only(e);
+        }
+
+        private void edit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cancel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

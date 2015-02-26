@@ -53,6 +53,8 @@
     <Compile Include="CardsKIVC.Designer.cs">
       <DependentUpon>CardsKIVC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Core.cs" />
+    <Compile Include="db.cs" />
     <Compile Include="OneCard.cs">
       <SubType>Form</SubType>
     </Compile>

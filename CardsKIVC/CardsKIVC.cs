@@ -23,9 +23,6 @@ namespace CardsKIVC
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Normal;
-            //Container.Width = this.Width;
-            //Container.Height = this.Height;
-
             cs = ConfigurationManager.ConnectionStrings["MyConnSQL"].ConnectionString;
             conn = new SqlConnection(cs);
         }
@@ -50,12 +47,7 @@ namespace CardsKIVC
         {
             int id = Convert.ToInt32(CardsGridView.CurrentRow.Cells[0].Value.ToString());
             OneCard oneCard = new OneCard(id);
-            //MessageBox.Show(id.ToString());
             oneCard.ShowDialog();
-
-
-            
-            //MessageBox.Show("CellDoubleClick \n" + e.RowIndex +"\n" + e.ColumnIndex);
         }
     }
 }

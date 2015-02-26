@@ -40,14 +40,23 @@
             this.id = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.HDD_count = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.CD_DVD_count = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.CD_DVD_more = new System.Windows.Forms.Button();
+            this.HDD_more = new System.Windows.Forms.Button();
+            this.RAM_more = new System.Windows.Forms.Button();
+            this.RAM_type = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.RAM_count = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.RAM_value = new System.Windows.Forms.ComboBox();
             this.CPU = new System.Windows.Forms.ComboBox();
             this.MB = new System.Windows.Forms.TextBox();
             this.comp_inv = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -55,16 +64,19 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.monitor_more = new System.Windows.Forms.Button();
             this.monitor_inv = new System.Windows.Forms.TextBox();
             this.monitor = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.printer_more = new System.Windows.Forms.Button();
             this.printer = new System.Windows.Forms.ComboBox();
             this.printer_inv = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.UPC_more = new System.Windows.Forms.Button();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.UPC_inv = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -91,21 +103,6 @@
             this.label19 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.ext_info = new System.Windows.Forms.RichTextBox();
-            this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.comboBox15 = new System.Windows.Forms.ComboBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.comboBox16 = new System.Windows.Forms.ComboBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.groupBox17 = new System.Windows.Forms.GroupBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.checkBox9 = new System.Windows.Forms.CheckBox();
             this.checkBox8 = new System.Windows.Forms.CheckBox();
@@ -116,9 +113,21 @@
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.edit = new System.Windows.Forms.Button();
             this.cancel = new System.Windows.Forms.Button();
-            this.apply = new System.Windows.Forms.Button();
-            this.save = new System.Windows.Forms.Button();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.checkBox15 = new System.Windows.Forms.CheckBox();
+            this.checkBox14 = new System.Windows.Forms.CheckBox();
+            this.checkBox13 = new System.Windows.Forms.CheckBox();
+            this.checkBox12 = new System.Windows.Forms.CheckBox();
+            this.checkBox11 = new System.Windows.Forms.CheckBox();
+            this.checkBox10 = new System.Windows.Forms.CheckBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -128,10 +137,8 @@
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
-            this.groupBox15.SuspendLayout();
-            this.groupBox16.SuspendLayout();
-            this.groupBox17.SuspendLayout();
             this.groupBox10.SuspendLayout();
+            this.groupBox11.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -157,9 +164,12 @@
             // cabinet
             // 
             this.cabinet.Location = new System.Drawing.Point(177, 17);
+            this.cabinet.MaxLength = 2;
             this.cabinet.Name = "cabinet";
             this.cabinet.Size = new System.Drawing.Size(32, 20);
             this.cabinet.TabIndex = 3;
+            this.cabinet.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cabinet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cabinet_KeyPress);
             // 
             // label2
             // 
@@ -185,13 +195,13 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Location = new System.Drawing.Point(241, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(346, 54);
+            this.groupBox2.Size = new System.Drawing.Size(299, 54);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
             // username
             // 
-            this.username.Location = new System.Drawing.Point(97, 17);
+            this.username.Location = new System.Drawing.Point(45, 17);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(244, 20);
             this.username.TabIndex = 1;
@@ -201,24 +211,24 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(7, 20);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 13);
+            this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Пользователь:";
+            this.label3.Text = "User:";
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.id);
             this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Location = new System.Drawing.Point(598, 12);
+            this.groupBox3.Location = new System.Drawing.Point(546, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(89, 54);
+            this.groupBox3.Size = new System.Drawing.Size(59, 54);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             // 
             // id
             // 
             this.id.AutoSize = true;
-            this.id.Location = new System.Drawing.Point(59, 23);
+            this.id.Location = new System.Drawing.Point(27, 23);
             this.id.Name = "id";
             this.id.Size = new System.Drawing.Size(0, 13);
             this.id.TabIndex = 1;
@@ -228,20 +238,29 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(3, 23);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.Size = new System.Drawing.Size(18, 13);
             this.label4.TabIndex = 0;
-            this.label4.Text = "ID карты";
+            this.label4.Text = "ID";
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.label26);
+            this.groupBox4.Controls.Add(this.HDD_count);
+            this.groupBox4.Controls.Add(this.label12);
+            this.groupBox4.Controls.Add(this.CD_DVD_count);
+            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Controls.Add(this.CD_DVD_more);
+            this.groupBox4.Controls.Add(this.HDD_more);
+            this.groupBox4.Controls.Add(this.RAM_more);
+            this.groupBox4.Controls.Add(this.RAM_type);
+            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Controls.Add(this.RAM_count);
             this.groupBox4.Controls.Add(this.comboBox4);
             this.groupBox4.Controls.Add(this.comboBox3);
-            this.groupBox4.Controls.Add(this.comboBox2);
+            this.groupBox4.Controls.Add(this.RAM_value);
             this.groupBox4.Controls.Add(this.CPU);
             this.groupBox4.Controls.Add(this.MB);
             this.groupBox4.Controls.Add(this.comp_inv);
-            this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.Controls.Add(this.label10);
             this.groupBox4.Controls.Add(this.label9);
             this.groupBox4.Controls.Add(this.label8);
@@ -250,79 +269,157 @@
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Location = new System.Drawing.Point(12, 73);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(220, 240);
+            this.groupBox4.Size = new System.Drawing.Size(293, 183);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Системный блок";
             // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(85, 129);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(12, 13);
+            this.label26.TabIndex = 24;
+            this.label26.Text = "x";
+            // 
+            // HDD_count
+            // 
+            this.HDD_count.AutoSize = true;
+            this.HDD_count.Location = new System.Drawing.Point(66, 130);
+            this.HDD_count.Name = "HDD_count";
+            this.HDD_count.Size = new System.Drawing.Size(13, 13);
+            this.HDD_count.TabIndex = 23;
+            this.HDD_count.Text = "0";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(86, 157);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(12, 13);
+            this.label12.TabIndex = 22;
+            this.label12.Text = "x";
+            // 
+            // CD_DVD_count
+            // 
+            this.CD_DVD_count.AutoSize = true;
+            this.CD_DVD_count.Location = new System.Drawing.Point(67, 158);
+            this.CD_DVD_count.Name = "CD_DVD_count";
+            this.CD_DVD_count.Size = new System.Drawing.Size(13, 13);
+            this.CD_DVD_count.TabIndex = 21;
+            this.CD_DVD_count.Text = "0";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(103, 127);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(61, 20);
+            this.textBox1.TabIndex = 20;
+            // 
+            // CD_DVD_more
+            // 
+            this.CD_DVD_more.Location = new System.Drawing.Point(245, 151);
+            this.CD_DVD_more.Name = "CD_DVD_more";
+            this.CD_DVD_more.Size = new System.Drawing.Size(39, 23);
+            this.CD_DVD_more.TabIndex = 19;
+            this.CD_DVD_more.Text = "Ещё";
+            this.CD_DVD_more.UseVisualStyleBackColor = true;
+            // 
+            // HDD_more
+            // 
+            this.HDD_more.Location = new System.Drawing.Point(245, 124);
+            this.HDD_more.Name = "HDD_more";
+            this.HDD_more.Size = new System.Drawing.Size(39, 23);
+            this.HDD_more.TabIndex = 18;
+            this.HDD_more.Text = "Ещё";
+            this.HDD_more.UseVisualStyleBackColor = true;
+            // 
+            // RAM_more
+            // 
+            this.RAM_more.Location = new System.Drawing.Point(245, 98);
+            this.RAM_more.Name = "RAM_more";
+            this.RAM_more.Size = new System.Drawing.Size(39, 23);
+            this.RAM_more.TabIndex = 17;
+            this.RAM_more.Text = "Ещё";
+            this.RAM_more.UseVisualStyleBackColor = true;
+            // 
+            // RAM_type
+            // 
+            this.RAM_type.FormattingEnabled = true;
+            this.RAM_type.Location = new System.Drawing.Point(170, 100);
+            this.RAM_type.Name = "RAM_type";
+            this.RAM_type.Size = new System.Drawing.Size(68, 21);
+            this.RAM_type.TabIndex = 16;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(85, 102);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(12, 13);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "x";
+            // 
+            // RAM_count
+            // 
+            this.RAM_count.AutoSize = true;
+            this.RAM_count.Location = new System.Drawing.Point(66, 103);
+            this.RAM_count.Name = "RAM_count";
+            this.RAM_count.Size = new System.Drawing.Size(13, 13);
+            this.RAM_count.TabIndex = 14;
+            this.RAM_count.Text = "0";
+            // 
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(63, 152);
+            this.comboBox4.Location = new System.Drawing.Point(103, 153);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(150, 21);
+            this.comboBox4.Size = new System.Drawing.Size(135, 21);
             this.comboBox4.TabIndex = 13;
             // 
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(63, 126);
+            this.comboBox3.Location = new System.Drawing.Point(170, 126);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(150, 21);
+            this.comboBox3.Size = new System.Drawing.Size(68, 21);
             this.comboBox3.TabIndex = 12;
             // 
-            // comboBox2
+            // RAM_value
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(63, 100);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(150, 21);
-            this.comboBox2.TabIndex = 11;
+            this.RAM_value.FormattingEnabled = true;
+            this.RAM_value.Location = new System.Drawing.Point(103, 100);
+            this.RAM_value.Name = "RAM_value";
+            this.RAM_value.Size = new System.Drawing.Size(61, 21);
+            this.RAM_value.TabIndex = 11;
             // 
             // CPU
             // 
             this.CPU.FormattingEnabled = true;
             this.CPU.Location = new System.Drawing.Point(63, 74);
             this.CPU.Name = "CPU";
-            this.CPU.Size = new System.Drawing.Size(150, 21);
+            this.CPU.Size = new System.Drawing.Size(175, 21);
             this.CPU.TabIndex = 10;
             // 
             // MB
             // 
             this.MB.Location = new System.Drawing.Point(63, 48);
             this.MB.Name = "MB";
-            this.MB.Size = new System.Drawing.Size(150, 20);
+            this.MB.Size = new System.Drawing.Size(175, 20);
             this.MB.TabIndex = 9;
             // 
             // comp_inv
             // 
             this.comp_inv.Location = new System.Drawing.Point(63, 22);
             this.comp_inv.Name = "comp_inv";
-            this.comp_inv.Size = new System.Drawing.Size(150, 20);
+            this.comp_inv.Size = new System.Drawing.Size(175, 20);
             this.comp_inv.TabIndex = 8;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(8, 207);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(41, 13);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "label12";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(8, 181);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 13);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "label11";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(8, 155);
+            this.label10.Location = new System.Drawing.Point(8, 156);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(50, 13);
             this.label10.TabIndex = 5;
@@ -375,16 +472,26 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.monitor_more);
             this.groupBox5.Controls.Add(this.monitor_inv);
             this.groupBox5.Controls.Add(this.monitor);
             this.groupBox5.Controls.Add(this.label14);
             this.groupBox5.Controls.Add(this.label13);
-            this.groupBox5.Location = new System.Drawing.Point(241, 73);
+            this.groupBox5.Location = new System.Drawing.Point(318, 73);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(220, 76);
+            this.groupBox5.Size = new System.Drawing.Size(287, 76);
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Монитор";
+            // 
+            // monitor_more
+            // 
+            this.monitor_more.Location = new System.Drawing.Point(220, 19);
+            this.monitor_more.Name = "monitor_more";
+            this.monitor_more.Size = new System.Drawing.Size(58, 49);
+            this.monitor_more.TabIndex = 18;
+            this.monitor_more.Text = "Ещё";
+            this.monitor_more.UseVisualStyleBackColor = true;
             // 
             // monitor_inv
             // 
@@ -420,16 +527,26 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.printer_more);
             this.groupBox6.Controls.Add(this.printer);
             this.groupBox6.Controls.Add(this.printer_inv);
             this.groupBox6.Controls.Add(this.label15);
             this.groupBox6.Controls.Add(this.label16);
-            this.groupBox6.Location = new System.Drawing.Point(241, 155);
+            this.groupBox6.Location = new System.Drawing.Point(318, 155);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(220, 76);
+            this.groupBox6.Size = new System.Drawing.Size(287, 76);
             this.groupBox6.TabIndex = 5;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Принтер";
+            // 
+            // printer_more
+            // 
+            this.printer_more.Location = new System.Drawing.Point(220, 22);
+            this.printer_more.Name = "printer_more";
+            this.printer_more.Size = new System.Drawing.Size(58, 46);
+            this.printer_more.TabIndex = 18;
+            this.printer_more.Text = "Ещё";
+            this.printer_more.UseVisualStyleBackColor = true;
             // 
             // printer
             // 
@@ -466,16 +583,26 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.UPC_more);
             this.groupBox7.Controls.Add(this.comboBox5);
             this.groupBox7.Controls.Add(this.UPC_inv);
             this.groupBox7.Controls.Add(this.label17);
             this.groupBox7.Controls.Add(this.label18);
-            this.groupBox7.Location = new System.Drawing.Point(241, 237);
+            this.groupBox7.Location = new System.Drawing.Point(318, 237);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(220, 76);
+            this.groupBox7.Size = new System.Drawing.Size(287, 76);
             this.groupBox7.TabIndex = 6;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "ИБП";
+            // 
+            // UPC_more
+            // 
+            this.UPC_more.Location = new System.Drawing.Point(220, 22);
+            this.UPC_more.Name = "UPC_more";
+            this.UPC_more.Size = new System.Drawing.Size(58, 46);
+            this.UPC_more.TabIndex = 18;
+            this.UPC_more.Text = "Ещё";
+            this.UPC_more.UseVisualStyleBackColor = true;
             // 
             // comboBox5
             // 
@@ -531,7 +658,7 @@
             this.groupBox8.Controls.Add(this.label21);
             this.groupBox8.Controls.Add(this.label20);
             this.groupBox8.Controls.Add(this.label19);
-            this.groupBox8.Location = new System.Drawing.Point(12, 321);
+            this.groupBox8.Location = new System.Drawing.Point(12, 453);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(410, 223);
             this.groupBox8.TabIndex = 7;
@@ -694,9 +821,9 @@
             // groupBox9
             // 
             this.groupBox9.Controls.Add(this.ext_info);
-            this.groupBox9.Location = new System.Drawing.Point(437, 321);
+            this.groupBox9.Location = new System.Drawing.Point(318, 319);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(250, 223);
+            this.groupBox9.Size = new System.Drawing.Size(287, 128);
             this.groupBox9.TabIndex = 8;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Дополнительная информация";
@@ -706,146 +833,9 @@
             this.ext_info.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ext_info.Location = new System.Drawing.Point(3, 16);
             this.ext_info.Name = "ext_info";
-            this.ext_info.Size = new System.Drawing.Size(244, 204);
+            this.ext_info.Size = new System.Drawing.Size(281, 109);
             this.ext_info.TabIndex = 0;
             this.ext_info.Text = "";
-            // 
-            // groupBox15
-            // 
-            this.groupBox15.Controls.Add(this.comboBox15);
-            this.groupBox15.Controls.Add(this.textBox18);
-            this.groupBox15.Controls.Add(this.label32);
-            this.groupBox15.Controls.Add(this.label33);
-            this.groupBox15.Location = new System.Drawing.Point(467, 237);
-            this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(220, 76);
-            this.groupBox15.TabIndex = 21;
-            this.groupBox15.TabStop = false;
-            this.groupBox15.Text = "Дополнительный ИБП";
-            // 
-            // comboBox15
-            // 
-            this.comboBox15.FormattingEnabled = true;
-            this.comboBox15.Location = new System.Drawing.Point(59, 22);
-            this.comboBox15.Name = "comboBox15";
-            this.comboBox15.Size = new System.Drawing.Size(150, 21);
-            this.comboBox15.TabIndex = 14;
-            // 
-            // textBox18
-            // 
-            this.textBox18.Location = new System.Drawing.Point(59, 48);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(150, 20);
-            this.textBox18.TabIndex = 9;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(11, 51);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(28, 13);
-            this.label32.TabIndex = 1;
-            this.label32.Text = "И/Н";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(6, 25);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(46, 13);
-            this.label33.TabIndex = 0;
-            this.label33.Text = "Модель";
-            // 
-            // groupBox16
-            // 
-            this.groupBox16.Controls.Add(this.comboBox16);
-            this.groupBox16.Controls.Add(this.textBox19);
-            this.groupBox16.Controls.Add(this.label34);
-            this.groupBox16.Controls.Add(this.label35);
-            this.groupBox16.Location = new System.Drawing.Point(467, 155);
-            this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Size = new System.Drawing.Size(220, 76);
-            this.groupBox16.TabIndex = 20;
-            this.groupBox16.TabStop = false;
-            this.groupBox16.Text = "Дополнительный Принтер";
-            // 
-            // comboBox16
-            // 
-            this.comboBox16.FormattingEnabled = true;
-            this.comboBox16.Location = new System.Drawing.Point(59, 22);
-            this.comboBox16.Name = "comboBox16";
-            this.comboBox16.Size = new System.Drawing.Size(150, 21);
-            this.comboBox16.TabIndex = 15;
-            // 
-            // textBox19
-            // 
-            this.textBox19.Location = new System.Drawing.Point(59, 48);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(150, 20);
-            this.textBox19.TabIndex = 10;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(11, 51);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(28, 13);
-            this.label34.TabIndex = 1;
-            this.label34.Text = "И/Н";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(6, 25);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(46, 13);
-            this.label35.TabIndex = 0;
-            this.label35.Text = "Модель";
-            // 
-            // groupBox17
-            // 
-            this.groupBox17.Controls.Add(this.textBox20);
-            this.groupBox17.Controls.Add(this.textBox21);
-            this.groupBox17.Controls.Add(this.label36);
-            this.groupBox17.Controls.Add(this.label37);
-            this.groupBox17.Location = new System.Drawing.Point(467, 73);
-            this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Size = new System.Drawing.Size(220, 76);
-            this.groupBox17.TabIndex = 19;
-            this.groupBox17.TabStop = false;
-            this.groupBox17.Text = "Дополнительный Монитор";
-            // 
-            // textBox20
-            // 
-            this.textBox20.Location = new System.Drawing.Point(59, 48);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(150, 20);
-            this.textBox20.TabIndex = 10;
-            // 
-            // textBox21
-            // 
-            this.textBox21.Location = new System.Drawing.Point(59, 22);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(150, 20);
-            this.textBox21.TabIndex = 9;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(11, 51);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(28, 13);
-            this.label36.TabIndex = 1;
-            this.label36.Text = "И/Н";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(6, 25);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(46, 13);
-            this.label37.TabIndex = 0;
-            this.label37.Text = "Модель";
             // 
             // groupBox10
             // 
@@ -858,9 +848,9 @@
             this.groupBox10.Controls.Add(this.checkBox3);
             this.groupBox10.Controls.Add(this.checkBox2);
             this.groupBox10.Controls.Add(this.checkBox1);
-            this.groupBox10.Location = new System.Drawing.Point(12, 551);
+            this.groupBox10.Location = new System.Drawing.Point(432, 453);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(410, 55);
+            this.groupBox10.Size = new System.Drawing.Size(173, 138);
             this.groupBox10.TabIndex = 23;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Специальное ПО";
@@ -868,7 +858,7 @@
             // checkBox9
             // 
             this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(7, 29);
+            this.checkBox9.Location = new System.Drawing.Point(97, 41);
             this.checkBox9.Name = "checkBox9";
             this.checkBox9.Size = new System.Drawing.Size(70, 17);
             this.checkBox9.TabIndex = 23;
@@ -878,7 +868,7 @@
             // checkBox8
             // 
             this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(328, 29);
+            this.checkBox8.Location = new System.Drawing.Point(97, 63);
             this.checkBox8.Name = "checkBox8";
             this.checkBox8.Size = new System.Drawing.Size(59, 17);
             this.checkBox8.TabIndex = 22;
@@ -888,7 +878,7 @@
             // checkBox7
             // 
             this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(328, 10);
+            this.checkBox7.Location = new System.Drawing.Point(97, 19);
             this.checkBox7.Name = "checkBox7";
             this.checkBox7.Size = new System.Drawing.Size(67, 17);
             this.checkBox7.TabIndex = 21;
@@ -898,7 +888,7 @@
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(260, 28);
+            this.checkBox6.Location = new System.Drawing.Point(9, 107);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(58, 17);
             this.checkBox6.TabIndex = 20;
@@ -908,7 +898,7 @@
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(82, 28);
+            this.checkBox5.Location = new System.Drawing.Point(97, 85);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(68, 17);
             this.checkBox5.TabIndex = 19;
@@ -918,7 +908,7 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(180, 28);
+            this.checkBox4.Location = new System.Drawing.Point(9, 63);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(74, 17);
             this.checkBox4.TabIndex = 18;
@@ -928,7 +918,7 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(260, 5);
+            this.checkBox3.Location = new System.Drawing.Point(9, 85);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(61, 17);
             this.checkBox3.TabIndex = 17;
@@ -938,7 +928,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(178, 5);
+            this.checkBox2.Location = new System.Drawing.Point(9, 41);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(63, 17);
             this.checkBox2.TabIndex = 16;
@@ -955,45 +945,159 @@
             this.checkBox1.Text = "ASOPD";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
+            // edit
+            // 
+            this.edit.Location = new System.Drawing.Point(432, 626);
+            this.edit.Name = "edit";
+            this.edit.Size = new System.Drawing.Size(83, 50);
+            this.edit.TabIndex = 24;
+            this.edit.Text = "Изменить";
+            this.edit.UseVisualStyleBackColor = true;
+            this.edit.Click += new System.EventHandler(this.edit_Click);
+            // 
             // cancel
             // 
-            this.cancel.Location = new System.Drawing.Point(612, 556);
+            this.cancel.Location = new System.Drawing.Point(521, 626);
             this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(75, 50);
-            this.cancel.TabIndex = 26;
+            this.cancel.Size = new System.Drawing.Size(84, 50);
+            this.cancel.TabIndex = 25;
             this.cancel.Text = "Отмена";
             this.cancel.UseVisualStyleBackColor = true;
+            this.cancel.Click += new System.EventHandler(this.cancel_Click);
             // 
-            // apply
+            // groupBox11
             // 
-            this.apply.Location = new System.Drawing.Point(440, 556);
-            this.apply.Name = "apply";
-            this.apply.Size = new System.Drawing.Size(75, 50);
-            this.apply.TabIndex = 24;
-            this.apply.Text = "Применить";
-            this.apply.UseVisualStyleBackColor = true;
+            this.groupBox11.Controls.Add(this.checkBox15);
+            this.groupBox11.Controls.Add(this.checkBox14);
+            this.groupBox11.Controls.Add(this.checkBox13);
+            this.groupBox11.Controls.Add(this.checkBox12);
+            this.groupBox11.Controls.Add(this.checkBox11);
+            this.groupBox11.Controls.Add(this.checkBox10);
+            this.groupBox11.Controls.Add(this.comboBox1);
+            this.groupBox11.Controls.Add(this.textBox7);
+            this.groupBox11.Controls.Add(this.textBox6);
+            this.groupBox11.Controls.Add(this.textBox5);
+            this.groupBox11.Controls.Add(this.textBox4);
+            this.groupBox11.Controls.Add(this.textBox3);
+            this.groupBox11.Location = new System.Drawing.Point(12, 262);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(293, 185);
+            this.groupBox11.TabIndex = 27;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Платы расштрения";
             // 
-            // save
+            // checkBox15
             // 
-            this.save.Location = new System.Drawing.Point(526, 556);
-            this.save.Name = "save";
-            this.save.Size = new System.Drawing.Size(75, 50);
-            this.save.TabIndex = 25;
-            this.save.Text = "Сохранить";
-            this.save.UseVisualStyleBackColor = true;
+            this.checkBox15.AutoSize = true;
+            this.checkBox15.Location = new System.Drawing.Point(11, 157);
+            this.checkBox15.Name = "checkBox15";
+            this.checkBox15.Size = new System.Drawing.Size(74, 17);
+            this.checkBox15.TabIndex = 29;
+            this.checkBox15.Text = "TV-тюнер";
+            this.checkBox15.UseVisualStyleBackColor = true;
+            // 
+            // checkBox14
+            // 
+            this.checkBox14.AutoSize = true;
+            this.checkBox14.Location = new System.Drawing.Point(11, 130);
+            this.checkBox14.Name = "checkBox14";
+            this.checkBox14.Size = new System.Drawing.Size(75, 17);
+            this.checkBox14.TabIndex = 28;
+            this.checkBox14.Text = "FM-тюнер";
+            this.checkBox14.UseVisualStyleBackColor = true;
+            // 
+            // checkBox13
+            // 
+            this.checkBox13.AutoSize = true;
+            this.checkBox13.Location = new System.Drawing.Point(11, 103);
+            this.checkBox13.Name = "checkBox13";
+            this.checkBox13.Size = new System.Drawing.Size(55, 17);
+            this.checkBox13.TabIndex = 27;
+            this.checkBox13.Text = "аудио";
+            this.checkBox13.UseVisualStyleBackColor = true;
+            // 
+            // checkBox12
+            // 
+            this.checkBox12.AutoSize = true;
+            this.checkBox12.Location = new System.Drawing.Point(11, 76);
+            this.checkBox12.Name = "checkBox12";
+            this.checkBox12.Size = new System.Drawing.Size(56, 17);
+            this.checkBox12.TabIndex = 26;
+            this.checkBox12.Text = "LAN 2";
+            this.checkBox12.UseVisualStyleBackColor = true;
+            // 
+            // checkBox11
+            // 
+            this.checkBox11.AutoSize = true;
+            this.checkBox11.Location = new System.Drawing.Point(11, 49);
+            this.checkBox11.Name = "checkBox11";
+            this.checkBox11.Size = new System.Drawing.Size(56, 17);
+            this.checkBox11.TabIndex = 25;
+            this.checkBox11.Text = "LAN 1";
+            this.checkBox11.UseVisualStyleBackColor = true;
+            // 
+            // checkBox10
+            // 
+            this.checkBox10.AutoSize = true;
+            this.checkBox10.Location = new System.Drawing.Point(11, 22);
+            this.checkBox10.Name = "checkBox10";
+            this.checkBox10.Size = new System.Drawing.Size(56, 17);
+            this.checkBox10.TabIndex = 24;
+            this.checkBox10.Text = "видео";
+            this.checkBox10.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(108, 20);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(161, 21);
+            this.comboBox1.TabIndex = 23;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(108, 74);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(161, 20);
+            this.textBox7.TabIndex = 16;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(108, 155);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(161, 20);
+            this.textBox6.TabIndex = 14;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(108, 128);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(161, 20);
+            this.textBox5.TabIndex = 13;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(108, 101);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(161, 20);
+            this.textBox4.TabIndex = 12;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(108, 47);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(161, 20);
+            this.textBox3.TabIndex = 11;
             // 
             // OneCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(888, 750);
+            this.ClientSize = new System.Drawing.Size(620, 689);
+            this.Controls.Add(this.groupBox11);
+            this.Controls.Add(this.edit);
             this.Controls.Add(this.cancel);
-            this.Controls.Add(this.apply);
-            this.Controls.Add(this.save);
             this.Controls.Add(this.groupBox10);
-            this.Controls.Add(this.groupBox15);
-            this.Controls.Add(this.groupBox16);
-            this.Controls.Add(this.groupBox17);
             this.Controls.Add(this.groupBox9);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox7);
@@ -1005,7 +1109,6 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "OneCard";
             this.Text = "OneCard";
-            this.Load += new System.EventHandler(this.OneCard_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -1023,14 +1126,10 @@
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.groupBox9.ResumeLayout(false);
-            this.groupBox15.ResumeLayout(false);
-            this.groupBox15.PerformLayout();
-            this.groupBox16.ResumeLayout(false);
-            this.groupBox16.PerformLayout();
-            this.groupBox17.ResumeLayout(false);
-            this.groupBox17.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1048,8 +1147,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label id;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -1060,8 +1157,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox RAM_value;
         private System.Windows.Forms.ComboBox CPU;
         private System.Windows.Forms.TextBox MB;
         private System.Windows.Forms.TextBox comp_inv;
@@ -1099,21 +1195,6 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.RichTextBox ext_info;
-        private System.Windows.Forms.GroupBox groupBox15;
-        private System.Windows.Forms.ComboBox comboBox15;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.GroupBox groupBox16;
-        private System.Windows.Forms.ComboBox comboBox16;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.GroupBox groupBox17;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label37;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.CheckBox checkBox4;
@@ -1124,10 +1205,37 @@
         private System.Windows.Forms.CheckBox checkBox8;
         private System.Windows.Forms.CheckBox checkBox7;
         private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.Button edit;
         private System.Windows.Forms.Button cancel;
-        private System.Windows.Forms.Button apply;
-        private System.Windows.Forms.Button save;
         private System.Windows.Forms.ComboBox building;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label RAM_count;
+        private System.Windows.Forms.ComboBox RAM_type;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label CD_DVD_count;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button CD_DVD_more;
+        private System.Windows.Forms.Button HDD_more;
+        private System.Windows.Forms.Button RAM_more;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.CheckBox checkBox15;
+        private System.Windows.Forms.CheckBox checkBox14;
+        private System.Windows.Forms.CheckBox checkBox13;
+        private System.Windows.Forms.CheckBox checkBox12;
+        private System.Windows.Forms.CheckBox checkBox11;
+        private System.Windows.Forms.CheckBox checkBox10;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button monitor_more;
+        private System.Windows.Forms.Button printer_more;
+        private System.Windows.Forms.Button UPC_more;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label HDD_count;
 
     }
 }

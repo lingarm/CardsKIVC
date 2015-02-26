@@ -51,8 +51,8 @@
             // Container.Panel2
             // 
             this.Container.Panel2.Controls.Add(this.CardsGridView);
-            this.Container.Size = new System.Drawing.Size(623, 313);
-            this.Container.SplitterDistance = 161;
+            this.Container.Size = new System.Drawing.Size(769, 415);
+            this.Container.SplitterDistance = 198;
             this.Container.TabIndex = 3;
             // 
             // CardsGridView
@@ -67,7 +67,7 @@
             this.CardsGridView.Name = "CardsGridView";
             this.CardsGridView.ReadOnly = true;
             this.CardsGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.CardsGridView.Size = new System.Drawing.Size(458, 313);
+            this.CardsGridView.Size = new System.Drawing.Size(567, 415);
             this.CardsGridView.TabIndex = 0;
             this.CardsGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CardsGridView_CellDoubleClick);
             // 
@@ -75,7 +75,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(647, 364);
+            this.ClientSize = new System.Drawing.Size(793, 466);
             this.Controls.Add(this.Container);
             this.Name = "CardsKIVC";
             this.Text = "CardsKIVC";
