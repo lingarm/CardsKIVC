@@ -44,18 +44,18 @@
             this.HDD_count = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.CD_DVD_count = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.HDD_value1 = new System.Windows.Forms.TextBox();
             this.CD_DVD_more = new System.Windows.Forms.Button();
             this.HDD_more = new System.Windows.Forms.Button();
             this.RAM_more = new System.Windows.Forms.Button();
-            this.RAM_type = new System.Windows.Forms.ComboBox();
+            this.RAM_type1 = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.RAM_count = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.RAM_value = new System.Windows.Forms.ComboBox();
+            this.CD_DVD1 = new System.Windows.Forms.ComboBox();
+            this.HDD_type1 = new System.Windows.Forms.ComboBox();
+            this.RAM_value1 = new System.Windows.Forms.ComboBox();
             this.CPU = new System.Windows.Forms.ComboBox();
-            this.MB = new System.Windows.Forms.TextBox();
+            this.motherboard = new System.Windows.Forms.TextBox();
             this.comp_inv = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -65,20 +65,20 @@
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.monitor_more = new System.Windows.Forms.Button();
-            this.monitor_inv = new System.Windows.Forms.TextBox();
-            this.monitor = new System.Windows.Forms.TextBox();
+            this.monitor_inv1 = new System.Windows.Forms.TextBox();
+            this.monitor1 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.printer_more = new System.Windows.Forms.Button();
-            this.printer = new System.Windows.Forms.ComboBox();
-            this.printer_inv = new System.Windows.Forms.TextBox();
+            this.printer1 = new System.Windows.Forms.ComboBox();
+            this.printer_inv1 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.UPC_more = new System.Windows.Forms.Button();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.UPC_inv = new System.Windows.Forms.TextBox();
+            this.UPC1 = new System.Windows.Forms.ComboBox();
+            this.UPC_inv1 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -89,13 +89,13 @@
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
-            this.comboBox12 = new System.Windows.Forms.ComboBox();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.PDF = new System.Windows.Forms.ComboBox();
+            this.skype = new System.Windows.Forms.ComboBox();
+            this.archiver = new System.Windows.Forms.ComboBox();
+            this.office = new System.Windows.Forms.ComboBox();
+            this.antivirus = new System.Windows.Forms.ComboBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.OC = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -122,7 +122,7 @@
             this.checkBox12 = new System.Windows.Forms.CheckBox();
             this.checkBox11 = new System.Windows.Forms.CheckBox();
             this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.ext_board_video_type = new System.Windows.Forms.ComboBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -248,18 +248,18 @@
             this.groupBox4.Controls.Add(this.HDD_count);
             this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Controls.Add(this.CD_DVD_count);
-            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Controls.Add(this.HDD_value1);
             this.groupBox4.Controls.Add(this.CD_DVD_more);
             this.groupBox4.Controls.Add(this.HDD_more);
             this.groupBox4.Controls.Add(this.RAM_more);
-            this.groupBox4.Controls.Add(this.RAM_type);
+            this.groupBox4.Controls.Add(this.RAM_type1);
             this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.Controls.Add(this.RAM_count);
-            this.groupBox4.Controls.Add(this.comboBox4);
-            this.groupBox4.Controls.Add(this.comboBox3);
-            this.groupBox4.Controls.Add(this.RAM_value);
+            this.groupBox4.Controls.Add(this.CD_DVD1);
+            this.groupBox4.Controls.Add(this.HDD_type1);
+            this.groupBox4.Controls.Add(this.RAM_value1);
             this.groupBox4.Controls.Add(this.CPU);
-            this.groupBox4.Controls.Add(this.MB);
+            this.groupBox4.Controls.Add(this.motherboard);
             this.groupBox4.Controls.Add(this.comp_inv);
             this.groupBox4.Controls.Add(this.label10);
             this.groupBox4.Controls.Add(this.label9);
@@ -310,12 +310,12 @@
             this.CD_DVD_count.TabIndex = 21;
             this.CD_DVD_count.Text = "0";
             // 
-            // textBox1
+            // HDD_value1
             // 
-            this.textBox1.Location = new System.Drawing.Point(103, 127);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(61, 20);
-            this.textBox1.TabIndex = 20;
+            this.HDD_value1.Location = new System.Drawing.Point(103, 127);
+            this.HDD_value1.Name = "HDD_value1";
+            this.HDD_value1.Size = new System.Drawing.Size(61, 20);
+            this.HDD_value1.TabIndex = 20;
             // 
             // CD_DVD_more
             // 
@@ -344,13 +344,13 @@
             this.RAM_more.Text = "Ещё";
             this.RAM_more.UseVisualStyleBackColor = true;
             // 
-            // RAM_type
+            // RAM_type1
             // 
-            this.RAM_type.FormattingEnabled = true;
-            this.RAM_type.Location = new System.Drawing.Point(170, 100);
-            this.RAM_type.Name = "RAM_type";
-            this.RAM_type.Size = new System.Drawing.Size(68, 21);
-            this.RAM_type.TabIndex = 16;
+            this.RAM_type1.FormattingEnabled = true;
+            this.RAM_type1.Location = new System.Drawing.Point(170, 100);
+            this.RAM_type1.Name = "RAM_type1";
+            this.RAM_type1.Size = new System.Drawing.Size(68, 21);
+            this.RAM_type1.TabIndex = 16;
             // 
             // label11
             // 
@@ -370,29 +370,29 @@
             this.RAM_count.TabIndex = 14;
             this.RAM_count.Text = "0";
             // 
-            // comboBox4
+            // CD_DVD1
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(103, 153);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(135, 21);
-            this.comboBox4.TabIndex = 13;
+            this.CD_DVD1.FormattingEnabled = true;
+            this.CD_DVD1.Location = new System.Drawing.Point(103, 153);
+            this.CD_DVD1.Name = "CD_DVD1";
+            this.CD_DVD1.Size = new System.Drawing.Size(135, 21);
+            this.CD_DVD1.TabIndex = 13;
             // 
-            // comboBox3
+            // HDD_type1
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(170, 126);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(68, 21);
-            this.comboBox3.TabIndex = 12;
+            this.HDD_type1.FormattingEnabled = true;
+            this.HDD_type1.Location = new System.Drawing.Point(170, 126);
+            this.HDD_type1.Name = "HDD_type1";
+            this.HDD_type1.Size = new System.Drawing.Size(68, 21);
+            this.HDD_type1.TabIndex = 12;
             // 
-            // RAM_value
+            // RAM_value1
             // 
-            this.RAM_value.FormattingEnabled = true;
-            this.RAM_value.Location = new System.Drawing.Point(103, 100);
-            this.RAM_value.Name = "RAM_value";
-            this.RAM_value.Size = new System.Drawing.Size(61, 21);
-            this.RAM_value.TabIndex = 11;
+            this.RAM_value1.FormattingEnabled = true;
+            this.RAM_value1.Location = new System.Drawing.Point(103, 100);
+            this.RAM_value1.Name = "RAM_value1";
+            this.RAM_value1.Size = new System.Drawing.Size(61, 21);
+            this.RAM_value1.TabIndex = 11;
             // 
             // CPU
             // 
@@ -402,12 +402,12 @@
             this.CPU.Size = new System.Drawing.Size(175, 21);
             this.CPU.TabIndex = 10;
             // 
-            // MB
+            // motherboard
             // 
-            this.MB.Location = new System.Drawing.Point(63, 48);
-            this.MB.Name = "MB";
-            this.MB.Size = new System.Drawing.Size(175, 20);
-            this.MB.TabIndex = 9;
+            this.motherboard.Location = new System.Drawing.Point(63, 48);
+            this.motherboard.Name = "motherboard";
+            this.motherboard.Size = new System.Drawing.Size(175, 20);
+            this.motherboard.TabIndex = 9;
             // 
             // comp_inv
             // 
@@ -473,8 +473,8 @@
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.monitor_more);
-            this.groupBox5.Controls.Add(this.monitor_inv);
-            this.groupBox5.Controls.Add(this.monitor);
+            this.groupBox5.Controls.Add(this.monitor_inv1);
+            this.groupBox5.Controls.Add(this.monitor1);
             this.groupBox5.Controls.Add(this.label14);
             this.groupBox5.Controls.Add(this.label13);
             this.groupBox5.Location = new System.Drawing.Point(318, 73);
@@ -493,19 +493,19 @@
             this.monitor_more.Text = "Ещё";
             this.monitor_more.UseVisualStyleBackColor = true;
             // 
-            // monitor_inv
+            // monitor_inv1
             // 
-            this.monitor_inv.Location = new System.Drawing.Point(59, 48);
-            this.monitor_inv.Name = "monitor_inv";
-            this.monitor_inv.Size = new System.Drawing.Size(150, 20);
-            this.monitor_inv.TabIndex = 10;
+            this.monitor_inv1.Location = new System.Drawing.Point(59, 48);
+            this.monitor_inv1.Name = "monitor_inv1";
+            this.monitor_inv1.Size = new System.Drawing.Size(150, 20);
+            this.monitor_inv1.TabIndex = 10;
             // 
-            // monitor
+            // monitor1
             // 
-            this.monitor.Location = new System.Drawing.Point(59, 22);
-            this.monitor.Name = "monitor";
-            this.monitor.Size = new System.Drawing.Size(150, 20);
-            this.monitor.TabIndex = 9;
+            this.monitor1.Location = new System.Drawing.Point(59, 22);
+            this.monitor1.Name = "monitor1";
+            this.monitor1.Size = new System.Drawing.Size(150, 20);
+            this.monitor1.TabIndex = 9;
             // 
             // label14
             // 
@@ -528,8 +528,8 @@
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.printer_more);
-            this.groupBox6.Controls.Add(this.printer);
-            this.groupBox6.Controls.Add(this.printer_inv);
+            this.groupBox6.Controls.Add(this.printer1);
+            this.groupBox6.Controls.Add(this.printer_inv1);
             this.groupBox6.Controls.Add(this.label15);
             this.groupBox6.Controls.Add(this.label16);
             this.groupBox6.Location = new System.Drawing.Point(318, 155);
@@ -548,20 +548,20 @@
             this.printer_more.Text = "Ещё";
             this.printer_more.UseVisualStyleBackColor = true;
             // 
-            // printer
+            // printer1
             // 
-            this.printer.FormattingEnabled = true;
-            this.printer.Location = new System.Drawing.Point(59, 22);
-            this.printer.Name = "printer";
-            this.printer.Size = new System.Drawing.Size(150, 21);
-            this.printer.TabIndex = 15;
+            this.printer1.FormattingEnabled = true;
+            this.printer1.Location = new System.Drawing.Point(59, 22);
+            this.printer1.Name = "printer1";
+            this.printer1.Size = new System.Drawing.Size(150, 21);
+            this.printer1.TabIndex = 15;
             // 
-            // printer_inv
+            // printer_inv1
             // 
-            this.printer_inv.Location = new System.Drawing.Point(59, 48);
-            this.printer_inv.Name = "printer_inv";
-            this.printer_inv.Size = new System.Drawing.Size(150, 20);
-            this.printer_inv.TabIndex = 10;
+            this.printer_inv1.Location = new System.Drawing.Point(59, 48);
+            this.printer_inv1.Name = "printer_inv1";
+            this.printer_inv1.Size = new System.Drawing.Size(150, 20);
+            this.printer_inv1.TabIndex = 10;
             // 
             // label15
             // 
@@ -584,8 +584,8 @@
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.UPC_more);
-            this.groupBox7.Controls.Add(this.comboBox5);
-            this.groupBox7.Controls.Add(this.UPC_inv);
+            this.groupBox7.Controls.Add(this.UPC1);
+            this.groupBox7.Controls.Add(this.UPC_inv1);
             this.groupBox7.Controls.Add(this.label17);
             this.groupBox7.Controls.Add(this.label18);
             this.groupBox7.Location = new System.Drawing.Point(318, 237);
@@ -604,20 +604,20 @@
             this.UPC_more.Text = "Ещё";
             this.UPC_more.UseVisualStyleBackColor = true;
             // 
-            // comboBox5
+            // UPC1
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(59, 22);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(150, 21);
-            this.comboBox5.TabIndex = 14;
+            this.UPC1.FormattingEnabled = true;
+            this.UPC1.Location = new System.Drawing.Point(59, 22);
+            this.UPC1.Name = "UPC1";
+            this.UPC1.Size = new System.Drawing.Size(150, 21);
+            this.UPC1.TabIndex = 14;
             // 
-            // UPC_inv
+            // UPC_inv1
             // 
-            this.UPC_inv.Location = new System.Drawing.Point(59, 48);
-            this.UPC_inv.Name = "UPC_inv";
-            this.UPC_inv.Size = new System.Drawing.Size(150, 20);
-            this.UPC_inv.TabIndex = 9;
+            this.UPC_inv1.Location = new System.Drawing.Point(59, 48);
+            this.UPC_inv1.Name = "UPC_inv1";
+            this.UPC_inv1.Size = new System.Drawing.Size(150, 20);
+            this.UPC_inv1.TabIndex = 9;
             // 
             // label17
             // 
@@ -646,13 +646,13 @@
             this.groupBox8.Controls.Add(this.textBox10);
             this.groupBox8.Controls.Add(this.textBox9);
             this.groupBox8.Controls.Add(this.textBox8);
-            this.groupBox8.Controls.Add(this.comboBox12);
-            this.groupBox8.Controls.Add(this.comboBox11);
-            this.groupBox8.Controls.Add(this.comboBox10);
-            this.groupBox8.Controls.Add(this.comboBox9);
-            this.groupBox8.Controls.Add(this.comboBox8);
+            this.groupBox8.Controls.Add(this.PDF);
+            this.groupBox8.Controls.Add(this.skype);
+            this.groupBox8.Controls.Add(this.archiver);
+            this.groupBox8.Controls.Add(this.office);
+            this.groupBox8.Controls.Add(this.antivirus);
             this.groupBox8.Controls.Add(this.label24);
-            this.groupBox8.Controls.Add(this.comboBox7);
+            this.groupBox8.Controls.Add(this.OC);
             this.groupBox8.Controls.Add(this.label23);
             this.groupBox8.Controls.Add(this.label22);
             this.groupBox8.Controls.Add(this.label21);
@@ -716,45 +716,45 @@
             this.textBox8.Size = new System.Drawing.Size(174, 20);
             this.textBox8.TabIndex = 22;
             // 
-            // comboBox12
+            // PDF
             // 
-            this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Location = new System.Drawing.Point(77, 182);
-            this.comboBox12.Name = "comboBox12";
-            this.comboBox12.Size = new System.Drawing.Size(140, 21);
-            this.comboBox12.TabIndex = 21;
+            this.PDF.FormattingEnabled = true;
+            this.PDF.Location = new System.Drawing.Point(77, 182);
+            this.PDF.Name = "PDF";
+            this.PDF.Size = new System.Drawing.Size(140, 21);
+            this.PDF.TabIndex = 21;
             // 
-            // comboBox11
+            // skype
             // 
-            this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Location = new System.Drawing.Point(77, 152);
-            this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(140, 21);
-            this.comboBox11.TabIndex = 20;
+            this.skype.FormattingEnabled = true;
+            this.skype.Location = new System.Drawing.Point(77, 152);
+            this.skype.Name = "skype";
+            this.skype.Size = new System.Drawing.Size(140, 21);
+            this.skype.TabIndex = 20;
             // 
-            // comboBox10
+            // archiver
             // 
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Location = new System.Drawing.Point(77, 122);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(140, 21);
-            this.comboBox10.TabIndex = 19;
+            this.archiver.FormattingEnabled = true;
+            this.archiver.Location = new System.Drawing.Point(77, 122);
+            this.archiver.Name = "archiver";
+            this.archiver.Size = new System.Drawing.Size(140, 21);
+            this.archiver.TabIndex = 19;
             // 
-            // comboBox9
+            // office
             // 
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(77, 92);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(140, 21);
-            this.comboBox9.TabIndex = 18;
+            this.office.FormattingEnabled = true;
+            this.office.Location = new System.Drawing.Point(77, 92);
+            this.office.Name = "office";
+            this.office.Size = new System.Drawing.Size(140, 21);
+            this.office.TabIndex = 18;
             // 
-            // comboBox8
+            // antivirus
             // 
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(77, 62);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(140, 21);
-            this.comboBox8.TabIndex = 17;
+            this.antivirus.FormattingEnabled = true;
+            this.antivirus.Location = new System.Drawing.Point(77, 62);
+            this.antivirus.Name = "antivirus";
+            this.antivirus.Size = new System.Drawing.Size(140, 21);
+            this.antivirus.TabIndex = 17;
             // 
             // label24
             // 
@@ -765,13 +765,13 @@
             this.label24.TabIndex = 16;
             this.label24.Text = "PDF";
             // 
-            // comboBox7
+            // OC
             // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(77, 32);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(140, 21);
-            this.comboBox7.TabIndex = 15;
+            this.OC.FormattingEnabled = true;
+            this.OC.Location = new System.Drawing.Point(77, 32);
+            this.OC.Name = "OC";
+            this.OC.Size = new System.Drawing.Size(140, 21);
+            this.OC.TabIndex = 15;
             // 
             // label23
             // 
@@ -973,7 +973,7 @@
             this.groupBox11.Controls.Add(this.checkBox12);
             this.groupBox11.Controls.Add(this.checkBox11);
             this.groupBox11.Controls.Add(this.checkBox10);
-            this.groupBox11.Controls.Add(this.comboBox1);
+            this.groupBox11.Controls.Add(this.ext_board_video_type);
             this.groupBox11.Controls.Add(this.textBox7);
             this.groupBox11.Controls.Add(this.textBox6);
             this.groupBox11.Controls.Add(this.textBox5);
@@ -1046,13 +1046,13 @@
             this.checkBox10.Text = "видео";
             this.checkBox10.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // ext_board_video_type
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(108, 20);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(161, 21);
-            this.comboBox1.TabIndex = 23;
+            this.ext_board_video_type.FormattingEnabled = true;
+            this.ext_board_video_type.Location = new System.Drawing.Point(108, 20);
+            this.ext_board_video_type.Name = "ext_board_video_type";
+            this.ext_board_video_type.Size = new System.Drawing.Size(161, 21);
+            this.ext_board_video_type.TabIndex = 23;
             // 
             // textBox7
             // 
@@ -1156,10 +1156,10 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox RAM_value;
+        private System.Windows.Forms.ComboBox CD_DVD1;
+        private System.Windows.Forms.ComboBox RAM_value1;
         private System.Windows.Forms.ComboBox CPU;
-        private System.Windows.Forms.TextBox MB;
+        private System.Windows.Forms.TextBox motherboard;
         private System.Windows.Forms.TextBox comp_inv;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label label15;
@@ -1167,20 +1167,20 @@
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox monitor_inv;
-        private System.Windows.Forms.TextBox monitor;
-        private System.Windows.Forms.ComboBox printer;
-        private System.Windows.Forms.TextBox printer_inv;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.TextBox UPC_inv;
+        private System.Windows.Forms.TextBox monitor_inv1;
+        private System.Windows.Forms.TextBox monitor1;
+        private System.Windows.Forms.ComboBox printer1;
+        private System.Windows.Forms.TextBox printer_inv1;
+        private System.Windows.Forms.ComboBox UPC1;
+        private System.Windows.Forms.TextBox UPC_inv1;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.ComboBox comboBox12;
-        private System.Windows.Forms.ComboBox comboBox11;
-        private System.Windows.Forms.ComboBox comboBox10;
-        private System.Windows.Forms.ComboBox comboBox9;
-        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.ComboBox PDF;
+        private System.Windows.Forms.ComboBox skype;
+        private System.Windows.Forms.ComboBox archiver;
+        private System.Windows.Forms.ComboBox office;
+        private System.Windows.Forms.ComboBox antivirus;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox OC;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
@@ -1208,13 +1208,13 @@
         private System.Windows.Forms.Button edit;
         private System.Windows.Forms.Button cancel;
         private System.Windows.Forms.ComboBox building;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox HDD_type1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label RAM_count;
-        private System.Windows.Forms.ComboBox RAM_type;
+        private System.Windows.Forms.ComboBox RAM_type1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label CD_DVD_count;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox HDD_value1;
         private System.Windows.Forms.Button CD_DVD_more;
         private System.Windows.Forms.Button HDD_more;
         private System.Windows.Forms.Button RAM_more;
@@ -1225,7 +1225,7 @@
         private System.Windows.Forms.CheckBox checkBox12;
         private System.Windows.Forms.CheckBox checkBox11;
         private System.Windows.Forms.CheckBox checkBox10;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox ext_board_video_type;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;

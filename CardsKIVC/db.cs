@@ -6,22 +6,21 @@ using System.Text;
 using System.Data;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace CardsKIVC
 {
     public class db
     {
         SqlConnection conn = null;
-        internal DataTable table = null;
         SqlDataAdapter adapter = null;
-        string cs = ConfigurationManager.ConnectionStrings["MyConnSQL"].ConnectionString;
+        string cs = "";
 
         /* Конструктор */
-        
-        /* Подключиться к базе данных */
-        protected void db_connect()
+        public db()
         {
-            
+            cs = ConfigurationManager.ConnectionStrings["MyConnSQL"].ConnectionString;
+            conn = new SqlConnection(cs);
         }
 
         /* Insert новую карточку */
@@ -37,17 +36,49 @@ namespace CardsKIVC
         }
 
         /*  Select из базы карточку */
-        protected bool select_card()
+        public Dictionary<string, string> select_card(int id)
         {
-            return true;
+            string query = "SELECT * FROM work_place WHERE id = " + id;
+            SqlCommand comm = new SqlCommand(query, conn);
+            SqlDataReader reader;
+            conn.Open();
+            reader = comm.ExecuteReader();
+            reader.Read();
+            Object[] values = new Object[reader.FieldCount];
+            int fieldCount = reader.GetValues(values);
+            var array = new Dictionary<string, string>();
+            for (int i = 0; i < fieldCount; i++)
+            {
+                array.Add(reader.GetName(i), values[i].ToString());
+            }
+            conn.Close();
+            return array;
+        }
+
+        /* Select для combobox */
+        public DataSet select_from_combo(string table)
+        {
+            string query = "SELECT * FROM " + table;
+            SqlCommand comm = new SqlCommand(query, conn);
+            SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+            conn.Open();
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            conn.Close();
+
+            return ds;
         }
 
         /*  Select из базы поля для DataGridView */
-        protected bool select_from_dgv(int id)
+        public DataTable select_from_dgv()
         {
-            string query = "SELECT * FROM work_place WHERE id = " + id;
-
-            return true;
+            DataTable table = new DataTable();
+            table = new DataTable();
+            
+            adapter = new SqlDataAdapter("exec ViewCards", conn);
+            SqlCommandBuilder cmd = new SqlCommandBuilder(adapter);
+            adapter.Fill(table);
+            return table;
         }
 
         /*  Select из базы карточки под выборку */

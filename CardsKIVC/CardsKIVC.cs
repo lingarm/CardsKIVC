@@ -14,33 +14,19 @@ namespace CardsKIVC
 {
     public partial class CardsKIVC : Form
     {
-        SqlConnection conn = null;
-        internal DataTable table = null;
-        SqlDataAdapter adapter = null;
-        string cs = null;
+        db data = null;
 
         public CardsKIVC()
         {
             InitializeComponent();
-            this.WindowState = FormWindowState.Normal;
-            cs = ConfigurationManager.ConnectionStrings["MyConnSQL"].ConnectionString;
-            conn = new SqlConnection(cs);
+            //this.WindowState = FormWindowState.Normal;
+            data = new db();
         }
 
         private void CardsKIVC_Load(object sender, EventArgs e)
         {
-            try
-            {
-                table = new DataTable();
-                adapter = new SqlDataAdapter("exec ViewCards", conn);
-                SqlCommandBuilder cmd = new SqlCommandBuilder(adapter);
-                adapter.Fill(table);
-                CardsGridView.DataSource = table;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            CardsGridView.DataSource = data.select_from_dgv();
+            data.select_from_dgv();
         }
 
         private void CardsGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

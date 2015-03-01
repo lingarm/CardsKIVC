@@ -7,63 +7,89 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-using System.Configuration;
-using System.Data.SqlClient;
-
 namespace CardsKIVC
 {
     public partial class OneCard : Form
     {
-        SqlConnection conn = null;
-        SqlConnection conn2 = null;
-        internal DataTable table = null;
-        SqlDataAdapter adapter = null;
-        string cs = null;
+        db data = null;
+        Dictionary<string, string> array = new Dictionary<string, string>();
 
         public OneCard(int id)
         {
             InitializeComponent();
-
-
-            cs = ConfigurationManager.ConnectionStrings["MyConnSQL"].ConnectionString;
-            conn = conn2 = new SqlConnection(cs);
-            string query = "SELECT * FROM work_place WHERE id = " + id;
-            SqlCommand comm = new SqlCommand(query, conn);
-            SqlDataReader reader;
-            conn.Open();
-            reader = comm.ExecuteReader();
             
-            int sv = 100;
+            //EnableControls(false);
+            data = new db();
+            
+            array = data.select_card(id);
 
-            if(reader.Read())
-            {
-                this.cabinet.Text = reader["cabinet"].ToString();
-                this.username.Text = reader["username"].ToString();
-                this.comp_inv.Text = reader["comp_inv"].ToString();
-                this.monitor_inv.Text = reader["monitor_inv1"].ToString();
-                this.UPC_inv.Text = reader["UPC_inv"].ToString();
+            this.cabinet.Text = array["cabinet"].ToString();
+            this.username.Text = array["username"].ToString();
+            this.id.Text = array["id"].ToString();
 
-                this.ext_info.Text = reader["ext_info"].ToString();
-                
-                sv = Convert.ToInt32(reader["building"]);
-            }
-            conn.Close();
+            this.comp_inv.Text = array["comp_inv"].ToString();
+            this.motherboard.Text = array["motherboard"].ToString();
+
+            this.monitor1.Text = array["monitor1"].ToString();
+            this.monitor_inv1.Text = array["monitor_inv1"].ToString();
+            //this.printer1.Text = array["printer1"].ToString();
+            this.printer_inv1.Text = array["printer_inv1"].ToString();
+            //this.UPC1.Text = array["UPC1"].ToString();
+            this.UPC_inv1.Text = array["UPC_inv1"].ToString();
+
+            this.ext_info.Text = array["ext_info"].ToString();
+
+
+            setCombo();
+            
             
 
-            query = "SELECT * FROM building";
-            comm = new SqlCommand(query, conn);
-            SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-            conn.Open();
-            DataSet ds = new DataSet();
-            adapter.Fill(ds);
-            conn.Close();
-
+            /*DataSet ds = new DataSet();
+            ds = data.select_from_combo("building");
             this.building.DataSource = ds.Tables[0];
             this.building.DisplayMember = "building";
             this.building.ValueMember = "id";
-            this.building.SelectedValue = sv;
+            this.building.SelectedValue = Convert.ToInt32(array["building"]);*/
+            
+        }
+        /* Заполнить все комбобоксы */
+        public void setCombo()
+        {
+            DataSet ds = new DataSet();
+            string name = "";
+            string str = "";
+            foreach (Control c in this.Controls)
+            {
+                if (c.GetType() == typeof(GroupBox) && c.Name == "groupBox1")
+                {
+                    str += "c: " + c.Name + "\n";
+                    foreach (Control j in c.Controls)
+                    {
+                        if (j.GetType() == typeof(ComboBox))
+                        {
+                            str += "j: " + j.Name + "\n";
+                            MessageBox.Show("j: " + j.Name + "\n");
+                            name = j.Name;
+                            ds = data.select_from_combo(name);
+                            this.building.DataSource = ds.Tables[0];
+                            this.building.DisplayMember = name;
+                            this.building.ValueMember = "id";
+                            this.building.SelectedValue = Convert.ToInt32(array[name]);
+                        }
+                    }
+                }
 
-            //MessageBox.Show(this.building.SelectedValue.ToString());
+            }
+            MessageBox.Show(str);
+        }
+
+        public void EnableControls(bool status)
+        {
+            foreach (Control c in this.Controls)
+            {
+                if (c.GetType() != typeof(Button))
+                    c.Enabled = status;
+            }
         }
 
         private void cabinet_KeyPress(object sender, KeyPressEventArgs e)
@@ -73,12 +99,13 @@ namespace CardsKIVC
 
         private void edit_Click(object sender, EventArgs e)
         {
-
+            EnableControls(true);
+            this.edit.Text = "Сохранить";
         }
 
         private void cancel_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }
